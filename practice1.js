@@ -57,3 +57,71 @@ console.log(display5(e));
 //Learnings: global scope ka vraiable aur parameter ka variable dono alag alag hote hai .
 // yaha parameter ka variable global scope ke variable ko shadow  krta hai.
 // paramter ka variable without declare hua means internally wo as a let e; hota hai.
+
+
+// write a code to get ooutput 40,20
+// Outer variable = 20
+// Inner block me same naam ka variable = 40
+// Shadowing use karni hai
+let f=20;
+{
+    let f=40;
+    console.log(f);
+}
+console.log(f); // another method is below
+
+let g=20;
+function display6(){
+    let g=40;
+    return g;
+}
+console.log(display6());
+console.log(g);
+
+// write a code to get output as 1,2
+// let a = 1
+// Function ke andar ek aur variable ho jo 2 print kare.
+// Bahar wala variable change nahi hona chahiye.
+
+let h=1;
+function display7(){
+    let h=2;
+    console.log(h);
+
+}
+console.log(h);
+display7();
+
+
+// write a code to get output as 10,20,10
+// Global variable 10
+// if block me same naam ka let variable 20
+// Total 3 console.logs hone chahiye
+
+let i=10;
+console.log(i);
+if(true){
+    let i=20;
+    console.log(i);
+}
+
+console.log(i);
+
+// write a code to get output as 5,10
+// Ek global variable.
+// Ek function variable.
+// Inner function ko dono values access karni chahiye.
+
+let k=10;
+function display8(){
+    let j=5;
+    
+    function inner(){
+
+        console.log(j);
+        console.log(k);
+    }
+    inner();
+}
+display8();
+
