@@ -25,4 +25,5 @@ let rollNo=7;
 let followTime=true;
 console.log("Roll No :",rollNo);
 console.log("Following time :",followTime);
+console.log("=============")
 
