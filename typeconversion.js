@@ -8,7 +8,7 @@
 
 // Username
 // Wallet balance
-// Payment amount
+// Payment amount   `
 // Payment status
 // Coupon code
 // Transaction ID
@@ -133,6 +133,158 @@ let username2=username;
 username="Sakshi";
 console.log("Previous Username :",username2);
 console.log("Updated Username :",username);
+console.log("-------------------------------")
+
+// Question 3 — Railway Ticket Booking System
+
+// Tum ek Railway Ticket Booking System bana rahe ho.
+
+// Ek passenger ticket book karta hai.
+
+// Initial situation
+
+// Passenger details:
+
+// Passenger name: "Roshan"
+// Age: 22
+// Ticket fare: 1250
+// Platform charge: "50" — String
+// Discount: 100
+// Payment status initially complete nahi hai.
+// Seat number abhi assign nahi hua.
+// Booking reference abhi generate nahi hua.
+// Passenger ka identity number bahut bada integer hai.
+// System ke phases
+
+// Phase 1 — Booking Created
+
+// Initial passenger information store karo aur print karo.
+
+let passengerName="Roshan";
+let ageOfPassenger=22;
+let ticketFare=1250;
+let platformCharge="50"-String;
+let discountMoney=100;
+let isPaymentCompleted=false;
+let seatNo=undefined;
+let bookingReference=undefined;
+let identityNumber=745634538475384435345n;
+
+// Phase 1 — Booking Created
+
+// Initial passenger information store karo aur print karo.
+console.log("Passenger Name :",passengerName);
+console.log("Passenger's Age :",ageOfPassenger);
+console.log("Ticket fare :",ticketFare);
+console.log("Platform Charge :",platformCharge);
+console.log("Discount Amount :",discountMoney);
+console.log("Payment Completion Status :",isPaymentCompleted);
+console.log("Seat No :",seatNo);
+console.log("Booking reference :",bookingReference);
+console.log("Identity Number :",identityNumber);
+
+
+// Phase 2 — Fare Calculation
+
+// Final payable fare calculate karo using:
+
+// Ticket fare
+// Discount
+// Platform charge
+let payableCharge=ticketFare-100+platformCharge;
+console.log("Payable Amount :",payableCharge);
+
+// Phase 3 — Payment
+// Payment successful hone ke baad:
+// Payment status update karo.
+// Seat number assign karo.
+// Booking reference assign karo.
+isPaymentCompleted=true;
+seatNo=435;
+bookingReference="A24";
+console.log("Updated Payment Status :",isPaymentCompleted);
+console.log("Updated Seat No :",seatNo);
+console.log("Updated Booking Reference :",bookingReference);
+
+// Phase 4 — Passenger Name Update
+
+// Passenger ke naam ki primitive copy banao.
+// Original passenger name change karo.
+// Dono names print karke verify karo ki primitive copy independently preserve hui.
+let passengerName2=passengerName;
+passengerName="Rahul";
+console.log("Older Passenger Name :",passengerName2);
+console.log("New Passenger Name :",passengerName);
+
+// Phase 5 — Cancellation
+
+// Passenger ticket cancel karta hai.
+
+// Appropriate values ko update/remove karo.
+seatNo=null;
+bookingReference=null;
+identityNumber=null;
+console.log("Seat no after Ticket Cancellation",seatNo);
+console.log("Bookinng reference after Ticket cancellation :",bookingReference);
+console.log("Updated Identity Number :",identityNumber);
+
+// Phase 6 — Diagnostic Test
+// System me ye expressions execute karo:
+// ticketFare + platformCharge
+// ticketFare - platformCharge
+// paymentStatus + 100
+// paymentStatus - "100"
+// null + ticketFare
+// undefined + ticketFare
+// "1250" == ticketFare
+// true == "1"
+// null == undefined
+// NaN == NaN
+let s1=ticketFare+platformCharge;
+console.log(s1);
+console.log(typeof s1); //NaN
+
+let s2=ticketFare-platformCharge;
+console.log(s1);
+console.log(typeof s1); // NaN
+
+let s3=isPaymentCompleted+100;
+console.log(s1);
+console.log(typeof s1);// NaN
+
+let s4=isPaymentCompleted-100;
+console.log(s1);
+console.log(typeof s1);// NaN
+
+let s5=null+ticketFare;
+console.log(s1);
+console.log(typeof s1); // Number
+
+
+let s6=undefined+ticketFare;
+console.log(s1);
+console.log(typeof s1); NaN
+
+let s7=("1250"==ticketFare);
+console.log(s1);
+console.log(typeof s1); //number
+
+let s8=(true=="1");
+console.log(s1);
+console.log(typeof s1); //true
+
+let s9=(null==undefined);
+console.log(s1);
+console.log(typeof s1);// true special case
+
+let s10=(NaN==NaN);
+console.log(s1);
+console.log(typeof s1); //false special case
+
+
+
+
+
 
 
 
