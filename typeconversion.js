@@ -241,45 +241,184 @@ console.log("Updated Identity Number :",identityNumber);
 // null == undefined
 // NaN == NaN
 let s1=ticketFare+platformCharge;
-console.log(s1);
-console.log(typeof s1); //NaN
+console.log(s1); //NaN
+console.log(typeof s1); //number
 
 let s2=ticketFare-platformCharge;
-console.log(s1);
-console.log(typeof s1); // NaN
+console.log(s2); // NaN
+console.log(typeof s2); // number
 
-let s3=isPaymentCompleted+100;
-console.log(s1);
-console.log(typeof s1);// NaN
+let s3=isPaymentCompleted+100;  
+console.log(s3); //101
+console.log(typeof s3);// number
 
 let s4=isPaymentCompleted-100;
-console.log(s1);
-console.log(typeof s1);// NaN
+console.log(s4); //-99
+console.log(typeof s4);// number 
 
 let s5=null+ticketFare;
-console.log(s1);
-console.log(typeof s1); // Number
+console.log(s5); //1250
+console.log(typeof s5); // Number
 
 
 let s6=undefined+ticketFare;
-console.log(s1);
-console.log(typeof s1); NaN
+console.log(s6); // NaN
+console.log(typeof s6); //number
 
 let s7=("1250"==ticketFare);
-console.log(s1);
-console.log(typeof s1); //number
+console.log(s7); //true
+console.log(typeof s7); //boolean
 
 let s8=(true=="1");
-console.log(s1);
-console.log(typeof s1); //true
+console.log(s8); //true
+console.log(typeof s8); //boolean
 
 let s9=(null==undefined);
-console.log(s1);
-console.log(typeof s1);// true special case
+console.log(s9); // true
+console.log(typeof s9);// boolean special case
 
 let s10=(NaN==NaN);
-console.log(s1);
-console.log(typeof s1); //false special case
+console.log(s10); //false
+console.log(typeof s10); //boolean special case
+
+console.log("----------------------------")
+
+// Question 4 — E-Commerce Return & Refund System
+// Ek online shopping platform ka Return & Refund system banao.
+// Scenario
+// Customer ne ek product purchase kiya:
+
+// Customer name: "Roshan Chauhan"
+// Product name: "Smart Watch"
+// Product price: 2499
+// Delivery charge: "100" — String
+// Coupon discount: 250
+// Payment status: initially not completed
+// Refund status: initially available nahi
+// Order ID: payment ke baad generate hoga
+// Return reason: initially available nahi
+let customerName="Roshan Chauhan";
+let productName="Smart Watch";
+let productPrice=2499;
+let deliveryCh="100"-String;
+let discount=250;
+let couponDiscount=250;
+let isPaymentDone=false;
+let refundStatus=undefined;
+let orderID=undefined;
+let returnReason=undefined;
+// Phase 1 — Order Creation
+// Saari initial information store aur print karo.
+console.log("Customer Name :",customerName);
+console.log("Product Name :",productName);
+console.log("Delivery Charge :",deliveryCh);
+console.log("Discount :",discount);
+console.log("Coupon Discount :",couponDiscount);
+console.log("Payment Status :",isPaymentDone);
+console.log("Refund Status :",refundStatus);
+console.log("Order ID :",orderID);
+console.log("Return REason :",returnReason);
+
+
+// Phase 2 — Payment
+
+// Customer payment complete karta hai.
+// Payment status update karo aur Order ID assign karo.
+isPaymentDone=true;
+orderID=8457346857364534n;
+console.log("Payment status after paying :",isPaymentDone);
+console.log("Order ID After paying :",orderID);
+
+
+// Phase 3 — Refund Calculation
+// Return approve hone par refund amount calculate karo.
+// Product price, discount aur delivery charge ko consider karo.
+let refundAmount=(productPrice-discount)-deliveryCh;
+
+
+// Phase 4 — Return
+// Customer product return karta hai.
+// Return status update karo aur appropriate values ko update/remove karo.
+refundStatus=true;
+returnReason="Not appropriate product";
+console.log("Refund Status after approval :",refundStatus);
+console.log("refund Reason :",returnReason);
+
+
+// Phase 5 — Primitive Copy
+// Product name ki primitive copy banao.
+// Original product name change karo.
+// Dono values print karo.
+let productName2=productName;
+productName="Smart TV";
+console.log("Previous Product :",productName2);
+console.log("Current Product :",productName);
+
+// Phase 6 — 🔥 Diagnostic Lab
+// Neeche exactly ye expressions test karo:
+
+// productPrice + deliveryCharge
+// productPrice - deliveryCharge
+// paymentStatus + 500
+// paymentStatus - "500"
+// refundStatus + 100
+// refundStatus - 100
+// returnReason + 50
+// returnReason - 50
+// null + productPrice
+// undefined + productPrice
+// "2499" == productPrice
+// false == "0"
+// null == false
+// undefined == null
+// NaN == NaN
+let m1=productPrice+deliveryCh; // NaN number 
+let m2=productPrice-deliveryCh; // NaN number
+let m3=isPaymentDone+500; //501 number
+let m4=isPaymentDone-"500"; //-499 number 
+let m5=refundStatus+100; //101 number 
+let m6=refundStatus-100; //-99 number 
+let m7=returnReason+50; //string string
+let m8=returnReason-50; //NaN number
+let m9=null+productPrice; //2499 number
+let m10=undefined+productPrice; //NaN number 
+let m11=("2499"==productPrice); //true boolean
+let m12=(false=="0"); //true boolean
+let m13=(null==false); // false boolean (Special rule)
+let m14=(undefined==null); // true boolean (Special rule)
+let m15=(NaN==NaN); // false boolean (Special rule)
+
+console.log(m1);
+console.log(typeof m1);
+console.log(m2);
+console.log(typeof m2);
+console.log(m3);
+console.log(typeof m3);
+console.log(m4);
+console.log(typeof m4);
+console.log(m5);
+console.log(typeof m5);
+console.log(m6);
+console.log(typeof m6);
+console.log(m7);
+console.log(typeof m7);
+console.log(m8);
+console.log(typeof m8);
+console.log(m9);
+console.log(typeof m9);
+console.log(m10);
+console.log(typeof m10);
+console.log(m11);
+console.log(typeof m11);
+console.log(m12);
+console.log(typeof m12);
+console.log(m13);
+console.log(typeof m13);
+console.log(m14);
+console.log(typeof m14);
+console.log(m15);
+console.log(typeof m15);
+
 
 
 
