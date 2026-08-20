@@ -419,6 +419,117 @@ console.log(typeof m14);
 console.log(m15);
 console.log(typeof m15);
 
+console.log("-----------------------")
+
+// Question 5 — ATM Withdrawal & Security System
+// Tum ek ATM Withdrawal System bana rahe ho.
+// Scenario
+
+// Customer ATM par aata hai.
+// Initial information:
+
+// Customer name: "Roshan"
+// Account balance: 50000
+// Withdrawal amount: "7500" — String
+// ATM fee: 20
+// PIN verification: successful
+// Account active: yes
+// Transaction ID: abhi generate nahi hui
+// Receipt: abhi available nahi
+// Security token: unique internal identifier
+// Customer account number: very large integer
+let cusName="Roshan";
+let balance=50000;
+let withdrawalAmount="7500";
+let atmFee=20;
+let isPinVerified=true;
+let isAccountActive=true;
+let transactionIdd=undefined;
+let isReceiptAvailable=undefined;
+let securityToken=Symbol("Security Token"); 
+let customerAccNo=58364587346587345n;
+let istransactionCompleted=undefined;
+
+// Phase 1 — ATM Session
+// Saari information store karo aur print karo.
+console.log("Customer Name :",cusName);
+console.log("Account balance :",balance);
+console.log("Withdrawal Amount :",withdrawalAmount);
+console.log("ATM Fee :",atmFee);
+console.log("Is Pin verified :",isPinVerified);
+console.log("Is Account Active :",isAccountActive);
+console.log("Transactional ID :",transactionID);
+console.log("Receipt :",receipt);
+console.log("Security Token :",securityToken);
+console.log("Customer Account Number :",customerAccNo);
+
+
+// Phase 2 — Withdrawal
+// Withdrawal process karo.
+// Account balance appropriately update karo.
+balance=balance-withdrawalAmount;
+console.log("Account balance after withrawal :",balance);
+
+
+// Transaction successful hone par:
+
+// Transaction status update karo
+// Transaction ID assign karo
+// Receipt availability update karo
+istransactionCompleted=true
+transactionIdd=6857468573648573485n;
+isReceiptAvailable=true;
+
+
+// Phase 3 — 🔥 Security Diagnostics
+// Exactly ye expressions test karo:
+// withdrawalAmount + atmFee
+// withdrawalAmount - atmFee
+// pinVerified + withdrawalAmount
+// accountActive - "1"
+// receiptAvailable + 100
+// transactionStatus - 50
+// null + withdrawalAmount
+// undefined + withdrawalAmount
+// "7500" == withdrawalAmount
+// true == withdrawalAmount
+// false == "0"
+// true == "true"
+// null == 0
+// undefined == 0
+// null == undefined
+// NaN == NaN
+let a1=(withdrawalAmount+atmFee);
+let a2=(withdrawalAmount-atmFee);
+let a3=(isPinVerified+withdrawalAmount);
+let a4=(isAccountActive-"1");
+let a5=(isReceiptAvailable+100);
+let a6=(istransactionCompleted-50);
+let a7=(null+withdrawalAmount);
+let a8=(undefined+withdrawalAmount);
+let a9=("7500"==withdrawalAmount);
+let a10=(true==withdrawalAmount);
+let a11=(false=="0");
+let a12=(true=="true");
+let a13=(null==0);
+let a14=(undefined==0);
+let a15=(null==undefined);
+let a16=(NaN==NaN);
+
+
+// Phase 4 — Account Update
+
+// Customer ke account name ki primitive copy banao.
+// Original name change karo.
+
+// Dono values print karo.
+
+// Phase 5 — Transaction Reversal
+
+// Transaction reverse ho jati hai.
+
+// Appropriate values ko update/remove karo.
+
 
 
 
